@@ -139,6 +139,6 @@ AppDir:
 
 AppImage:
   arch: x86_64
-  file_name: Twitch.Drops.Miner-x86_64.AppImage
+  file_name: Twitch.Drops.Miner.Unrestricted-x86_64.AppImage
   sign-key: None
   update-information: guess
