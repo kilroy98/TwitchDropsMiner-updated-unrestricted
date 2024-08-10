@@ -91,7 +91,7 @@ TDM is not intended for/as:
 - 100% uptime application, due to the underlying nature of it, expect fatal errors to happen every so often.
 - Being hosted on a remote server as a 24/7 miner.
 - Being used with more than one managed account.
-- Mining campaigns the managed account isn't linked to.
+- ~~Mining campaigns the managed account isn't linked to.~~ Fixed
 
 This means that features such as:
 
