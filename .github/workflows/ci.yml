@@ -60,7 +60,7 @@ jobs:
 
       - name: Create release folder
         run: |
-          $FolderName = 'Twitch Drops Miner'
+          $FolderName = 'Twitch Drops Miner Unrestricted'
           New-Item $FolderName -ItemType Directory
           Copy-Item dist\*.exe $FolderName
           Copy-Item manual.txt $FolderName
@@ -132,7 +132,7 @@ jobs:
 
       - name: Create release folder
         run: |
-          folder='Twitch Drops Miner'
+          folder='Twitch Drops Miner Unrestricted'
           mkdir "${folder}"
           cp manual.txt dist/* "${folder}"
           7z a Twitch.Drops.Miner.Linux.PyInstaller.zip "${folder}"
@@ -182,7 +182,7 @@ jobs:
 
       - name: Create release folder
         run: |
-          folder='Twitch Drops Miner'
+          folder='Twitch Drops Miner Unrestricted'
           mkdir "${folder}"
           cp *.AppImage manual.txt "${folder}"
           7z a Twitch.Drops.Miner.Linux.AppImage.zip "${folder}"

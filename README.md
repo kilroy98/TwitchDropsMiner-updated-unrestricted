@@ -1,4 +1,4 @@
-# Twitch Drops Miner
+# Twitch Drops Miner Unrestricted
 
 Thanks to @DevilXD and other contributors from the [original repo](https://github.com/DevilXD/TwitchDropsMiner) for the vast majority of the code.
 
@@ -75,7 +75,7 @@ If you'd be interested in running the latest master from source or building your
 
 ### Project goals:
 
-Twitch Drops Miner (TDM for short) has been designed with a couple of simple goals in mind. These are, specifically:
+Twitch Drops Miner Unrestricted (TDM for short) has been designed with a couple of simple goals in mind. These are, specifically:
 
 - Twitch Drops oriented - it's in the name. That's what I made it for.
 - Easy to use for an average person. Includes a nice looking GUI and is packaged as a ready-to-go executable, without requiring an existing Python installation to work.
