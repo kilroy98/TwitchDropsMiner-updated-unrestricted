@@ -155,33 +155,35 @@ class ClientType:
         URL("https://m.twitch.tv"),
         "r8s4dac0uhzifbpu9sjdiwzctle17ff",
         [
+            # Chrome versioning is done fully on android only,
+            # other platforms only use the major version
             (
                 "Mozilla/5.0 (Linux; Android 13) AppleWebKit/537.36 "
-                "(KHTML, like Gecko) Chrome/119.0.6045.66 Mobile Safari/537.36"
+                "(KHTML, like Gecko) Chrome/130.0.6723.102 Mobile Safari/537.36"
             ),
             (
                 "Mozilla/5.0 (Linux; Android 13; SM-A205U) AppleWebKit/537.36 "
-                "(KHTML, like Gecko) Chrome/119.0.6045.66 Mobile Safari/537.36"
+                "(KHTML, like Gecko) Chrome/130.0.6723.102 Mobile Safari/537.36"
             ),
             (
                 "Mozilla/5.0 (Linux; Android 13; SM-A102U) AppleWebKit/537.36 "
-                "(KHTML, like Gecko) Chrome/119.0.6045.66 Mobile Safari/537.36"
+                "(KHTML, like Gecko) Chrome/130.0.6723.102 Mobile Safari/537.36"
             ),
             (
                 "Mozilla/5.0 (Linux; Android 13; SM-G960U) AppleWebKit/537.36 "
-                "(KHTML, like Gecko) Chrome/119.0.6045.66 Mobile Safari/537.36"
+                "(KHTML, like Gecko) Chrome/130.0.6723.102 Mobile Safari/537.36"
             ),
             (
                 "Mozilla/5.0 (Linux; Android 13; SM-N960U) AppleWebKit/537.36 "
-                "(KHTML, like Gecko) Chrome/119.0.6045.66 Mobile Safari/537.36"
+                "(KHTML, like Gecko) Chrome/130.0.6723.102 Mobile Safari/537.36"
             ),
             (
                 "Mozilla/5.0 (Linux; Android 13; LM-Q720) AppleWebKit/537.36 "
-                "(KHTML, like Gecko) Chrome/119.0.6045.66 Mobile Safari/537.36"
+                "(KHTML, like Gecko) Chrome/130.0.6723.102 Mobile Safari/537.36"
             ),
             (
                 "Mozilla/5.0 (Linux; Android 13; LM-X420) AppleWebKit/537.36 "
-                "(KHTML, like Gecko) Chrome/119.0.6045.66 Mobile Safari/537.36"
+                "(KHTML, like Gecko) Chrome/130.0.6723.102 Mobile Safari/537.36"
             ),
         ]
     )
