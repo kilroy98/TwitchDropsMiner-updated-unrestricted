@@ -148,7 +148,7 @@ class ClientType:
         "kimne78kx3ncx6brgo4mv6wki5h1ko",
         (
             "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-            "(KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+            "(KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
         ),
     )
     MOBILE_WEB = ClientInfo(
