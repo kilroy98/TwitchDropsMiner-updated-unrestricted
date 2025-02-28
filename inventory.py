@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import re
+from enum import Enum
 from itertools import chain
 from typing import TYPE_CHECKING
 from functools import cached_property
@@ -25,14 +26,28 @@ DIMS_PATTERN = re.compile(r'-\d+x\d+(?=\.(?:jpg|png|gif)$)', re.I)
 def remove_dimensions(url: URLType) -> URLType:
     return URLType(DIMS_PATTERN.sub('', url))
 
+class BenefitType(Enum):
+    UNKNOWN = "UNKNOWN"
+    BADGE = "BADGE"
+    EMOTE = "EMOTE"
+    DIRECT_ENTITLEMENT = "DIRECT_ENTITLEMENT"
+
+    def is_badge_or_emote(self) -> bool:
+        return self in (BenefitType.BADGE, BenefitType.EMOTE)
+        
 
 class Benefit:
-    __slots__ = ("id", "name", "image_url")
+    __slots__ = ("id", "name", "type", "image_url")
 
     def __init__(self, data: JsonType):
         benefit_data: JsonType = data["benefit"]
         self.id: str = benefit_data["id"]
         self.name: str = benefit_data["name"]
+        self.type: BenefitType = (
+            BenefitType(benefit_data["distributionType"])
+            if benefit_data["distributionType"] in BenefitType.__members__.values()
+            else BenefitType.UNKNOWN
+        )
         self.image_url: URLType = benefit_data["imageAssetURL"]
 
 
@@ -314,6 +329,16 @@ class DropsCampaign:
     def total_drops(self) -> int:
         return len(self.timed_drops)
 
+    @property
+    def eligible(self) -> bool:
+        return self.linked or self.has_badge_or_emote
+
+    @cached_property
+    def has_badge_or_emote(self) -> bool:
+        return any(
+            benefit.type.is_badge_or_emote() for drop in self.drops for benefit in drop.benefits
+        )
+        
     @cached_property
     def finished(self) -> bool:
         return all(d.is_claimed for d in self.drops)
