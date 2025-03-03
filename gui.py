@@ -1455,9 +1455,13 @@ class InventoryOverview:
                 minutes=drop.required_minutes,
             )
         else:
-            progress_text = _("gui", "inventory", "minutes_progress").format(
-                minutes=drop.required_minutes
-            )
+            if drop.required_minutes > 0:
+                progress_text = _("gui", "inventory", "minutes_progress").format(
+                    minutes=drop.required_minutes
+                )
+            else:
+                # required_minutes is zero for subscription-based drops
+                progress_text = ''
             if datetime.now(timezone.utc) < drop.starts_at > drop.campaign.starts_at:
                 # this drop can only be earned later than the campaign start
                 alt_text = _("gui", "inventory", "starts").format(
