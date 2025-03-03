@@ -345,7 +345,7 @@ class DropsCampaign:
 
     @cached_property
     def claimed_drops(self) -> int:
-        return sum(d.is_claimed for d in self.drops)
+        return sum(d.is_claimed or d.required_minutes <= 0 for d in self.drops)
 
     @cached_property
     def remaining_drops(self) -> int:
