@@ -20,7 +20,7 @@ if __name__ == "__main__":
     from tkinter import messagebox
     from typing import IO, NoReturn
 
-    import truststoreAdd commentMore actions
+    import truststore
     truststore.inject_into_ssl()
 
     from translate import _
