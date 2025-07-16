@@ -1505,7 +1505,7 @@ class _SettingsVars(TypedDict):
 
 
 class SettingsPanel:
-    AUTOSTART_NAME: str = "TwitchDropsMinerUnrestrictedSecond"
+    AUTOSTART_NAME: str = "TwitchDropsMinerUnrestrictedFirst"
     AUTOSTART_KEY: str = "HKCU/Software/Microsoft/Windows/CurrentVersion/Run"
 
     def __init__(self, manager: GUIManager, master: ttk.Widget, root: tk.Tk):
