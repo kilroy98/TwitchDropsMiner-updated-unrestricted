@@ -73,7 +73,7 @@ jobs:
 
   linux-pyinstaller:
     name: Linux (PyInstaller)
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
@@ -144,7 +144,7 @@ jobs:
 
   linux-appimage:
     name: Linux (AppImage)
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
