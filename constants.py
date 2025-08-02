@@ -118,7 +118,7 @@ PING_TIMEOUT = timedelta(seconds=10)
 ONLINE_DELAY = timedelta(seconds=120)
 WATCH_INTERVAL = timedelta(seconds=20)
 # Strings
-WINDOW_TITLE = f"Twitch Drops Miner Unrestricted v{__version__} (by DevilXD)"
+WINDOW_TITLE = f"Twitch Drops Miner Unrestricted Second v{__version__} (by DevilXD)"
 # Logging
 FILE_FORMATTER = logging.Formatter(
     "{asctime}.{msecs:03.0f}:\t{levelname:>7}:\t{message}",

@@ -32,7 +32,7 @@ script:
 AppDir:
   app_info:
     id: io.github.devilxd.twitchdropsminer
-    name: Twitch Drops Miner Unrestricted
+    name: Twitch Drops Miner Unrestricted Second
     icon: io.github.devilxd.twitchdropsminer
     version: '{{APP_VERSION}}'
     exec: usr/bin/python3
@@ -141,6 +141,6 @@ AppDir:
 
 AppImage:
   arch: x86_64
-  file_name: Twitch.Drops.Miner.Unrestricted-x86_64.AppImage
+  file_name: Twitch.Drops.Miner.Unrestricted.Second-x86_64.AppImage
   sign-key: None
   update-information: guess
