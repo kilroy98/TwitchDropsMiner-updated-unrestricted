@@ -58,18 +58,18 @@ jobs:
 
       - name: Create release folder
         run: |
-          $FolderName = 'Twitch Drops Miner Unrestricted'
+          $FolderName = 'Twitch Drops Miner Unrestricted First'
           New-Item $FolderName -ItemType Directory
           Copy-Item dist\*.exe $FolderName
           Copy-Item manual.txt $FolderName
-          Compress-Archive -Path $FolderName -DestinationPath Twitch.Drops.Miner.Unrestricted.Windows.zip
+          Compress-Archive -Path $FolderName -DestinationPath Twitch.Drops.Miner.Unrestricted.First.Windows.zip
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
           if-no-files-found: error
-          name: Twitch.Drops.Miner.Unrestricted.Windows
-          path: Twitch.Drops.Miner.Unrestricted.Windows.zip
+          name: Twitch.Drops.Miner.Unrestricted.First.Windows
+          path: Twitch.Drops.Miner.Unrestricted.First.Windows.zip
 
   linux-pyinstaller:
     name: Linux (PyInstaller)
@@ -130,17 +130,17 @@ jobs:
 
       - name: Create release folder
         run: |
-          folder='Twitch Drops Miner Unrestricted'
+          folder='Twitch Drops Miner Unrestricted First'
           mkdir "${folder}"
           cp manual.txt dist/* "${folder}"
-          7z a Twitch.Drops.Miner.Unrestricted.Linux.PyInstaller.zip "${folder}"
+          7z a Twitch.Drops.Miner.Unrestricted.First.Linux.PyInstaller.zip "${folder}"
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
           if-no-files-found: error
-          name: Twitch.Drops.Miner.Unrestricted.Linux.PyInstaller
-          path: Twitch.Drops.Miner.Unrestricted.Linux.PyInstaller.zip
+          name: Twitch.Drops.Miner.Unrestricted.First.Linux.PyInstaller
+          path: Twitch.Drops.Miner.Unrestricted.First.Linux.PyInstaller.zip
 
   linux-appimage:
     name: Linux (AppImage)
@@ -180,17 +180,17 @@ jobs:
 
       - name: Create release folder
         run: |
-          folder='Twitch Drops Miner Unrestricted'
+          folder='Twitch Drops Miner Unrestricted First'
           mkdir "${folder}"
           cp *.AppImage manual.txt "${folder}"
-          7z a Twitch.Drops.Miner.Unrestricted.Linux.AppImage.zip "${folder}"
+          7z a Twitch.Drops.Miner.Unrestricted.First.Linux.AppImage.zip "${folder}"
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
           if-no-files-found: error
-          name: Twitch.Drops.Miner.Unrestricted.Linux.AppImage
-          path: Twitch.Drops.Miner.Unrestricted.Linux.AppImage.zip
+          name: Twitch.Drops.Miner.Unrestricted.First.Linux.AppImage
+          path: Twitch.Drops.Miner.Unrestricted.First.Linux.AppImage.zip
 
   update_releases_page:
     name: Upload builds to Releases

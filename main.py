@@ -6,7 +6,7 @@ from datetime import datetime
 
 
 if __name__ == "__main__":
-    print(f"{datetime.now().strftime('%Y-%m-%d %X')}: Starting: Twitch Drops Miner Unrestricted")
+    print(f"{datetime.now().strftime('%Y-%m-%d %X')}: Starting: Twitch Drops Miner Unrestricted First")
     freeze_support()
     import io
     import sys
