@@ -1034,7 +1034,7 @@ class ChannelList:
 
 
 class TrayIcon:
-    TITLE = "Twitch Drops Miner Unrestricted"
+    TITLE = "Twitch Drops Miner Unrestricted First"
 
     def __init__(self, manager: GUIManager, master: ttk.Widget):
         self._manager = manager
@@ -1734,7 +1734,7 @@ class SettingsPanel:
                     f"""
                     [Desktop Entry]
                     Type=Application
-                    Name=Twitch Drops Miner Unrestricted
+                    Name=Twitch Drops Miner Unrestricted First
                     Description=Mine timed drops on Twitch
                     Exec=sh -c '{autostart_path}'
                     """
