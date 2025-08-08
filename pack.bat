@@ -1,6 +1,6 @@
 @echo off
 IF NOT EXIST 7z.exe GOTO NO7Z
-IF NOT EXIST "Twitch Drops Miner Unrestricted" mkdir "Twitch Drops Miner Unrestricted First"
+IF NOT EXIST "Twitch Drops Miner Unrestricted First" mkdir "Twitch Drops Miner Unrestricted First"
 rem Prepare files
 copy /y /v dist\*.exe "Twitch Drops Miner Unrestricted First"
 copy /y /v manual.txt "Twitch Drops Miner Unrestricted First"
