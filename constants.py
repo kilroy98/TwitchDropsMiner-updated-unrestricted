@@ -317,7 +317,7 @@ GQL_OPERATIONS: dict[str, GQLOperation] = {
     # returns all in-progress campaigns
     "Inventory": GQLOperation(
         "Inventory",
-        "09acb7d3d7e605a92bdfdcc465f6aa481b71c234d8686a9ba38ea5ed51507592",
+        "d86775d0ef16a63a33ad52e80eaff963b2d5b72fada7c991504a57496e1d8e4b",
         # no variables needed
     ),
     # returns current state of drops (current drop progress)
@@ -346,7 +346,7 @@ GQL_OPERATIONS: dict[str, GQLOperation] = {
     # returns drops available for a particular channel (unused)
     "AvailableDrops": GQLOperation(
         "DropsHighlightService_AvailableDrops",
-        "eff13f4a43157238e40b4cd74b0dac3a41b5f8fb31de1a3b19347fae84e60b92",
+        "9a62a09bce5b53e26e64a671e530bc599cb6aab1e5ba3cbd5d85966d3940716f",
         variables={
             "channelID": ...,  # channel ID as a str
         },
